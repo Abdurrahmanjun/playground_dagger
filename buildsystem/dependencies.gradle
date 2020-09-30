@@ -10,6 +10,8 @@ ext {
     // Android Libraries
     androidxVersion = '1.1.0'
     constraintLayoutVersion = '1.1.3'
+    recyclerViewVersion = '1.1.0-rc01'
+    material = '1.2.1'
 
     // Network Libraries
     retrofitVersion = '2.8.1'
@@ -35,6 +37,8 @@ ext {
             androidCore:        [group: 'androidx.core', name: 'core-ktx', version: androidxVersion],
             appCompat:          [group: 'androidx.appcompat', name: 'appcompat', version: androidxVersion],
             constraintLayout:   [group: 'androidx.constraintlayout', name: 'constraintlayout', version: constraintLayoutVersion],
+            recyclerView:       [group: 'androidx.recyclerview', name: 'recyclerview', version: recyclerViewVersion],
+            material:           [group: 'com.google.android.material', name: 'material', version: material],
     ]
 
     def dependencyInjectionLibs = [
@@ -50,6 +54,8 @@ ext {
             [configuration: "implementation", dependency: androidLibs.androidCore],
             [configuration: "implementation", dependency: androidLibs.appCompat],
             [configuration: "implementation", dependency: androidLibs.constraintLayout],
+            [configuration: "implementation", dependency: androidLibs.recyclerView],
+            [configuration: "implementation", dependency: androidLibs.material],
             [configuration: "implementation", dependency: dependencyInjectionLibs.daggerCore],
             [configuration: "implementation", dependency: dependencyInjectionLibs.daggerAndroid],
             [configuration: "implementation", dependency: dependencyInjectionLibs.daggerSupport],
